@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Menu">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #15476b;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="334.0" layoutY="8.0" prefHeight="83.0" prefWidth="298.0" text="MENU" textAlignment="CENTER" textFill="#ffce2b">
+               <font>
+                  <Font name="Comic Sans MS" size="72.0" />
+               </font>
+            </Label>
+            <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #14406e; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
+               <font>
+                  <Font name="Calibri Light" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="allmenu" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#allmenuClick" prefHeight="37.0" prefWidth="170.0" style="-fx-background-color: #195382;" text="전체 메뉴" textFill="#aed017" />
+            <Button fx:id="starmenu" layoutX="184.0" layoutY="110.0" mnemonicParsing="false" onAction="#starmenuClick" prefHeight="37.0" prefWidth="170.0" style="-fx-background-color: #12334d;" text="추천 메뉴" textFill="#8c972a" />
+            <Pane layoutX="14.0" layoutY="147.0" prefHeight="399.0" prefWidth="939.0" style="-fx-background-color: #195382;">
+               <children>
+                  <Button fx:id="americano" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#americanoClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/images.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="latte" layoutX="257.0" layoutY="26.0" mnemonicParsing="false" onAction="#latteClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/다운로드.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="jamong" layoutX="502.0" layoutY="26.0" mnemonicParsing="false" onAction="#jamongClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fx:id="jamong" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/다운로드%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="lemon" layoutX="739.0" layoutY="26.0" mnemonicParsing="false" onAction="#lemonClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fx:id="lemon" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/s502635127_1.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="smoothie" layoutX="21.0" layoutY="214.0" mnemonicParsing="false" onAction="#smoothieClick" prefHeight="160.0" prefWidth="164.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fx:id="smoothie" fitHeight="150.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/망고.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="choco" layoutX="257.0" layoutY="214.0" mnemonicParsing="false" onAction="#chocoClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fx:id="choco" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/image_readtop_2018_307502_15263472033314926.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bread" layoutX="502.0" layoutY="214.0" mnemonicParsing="false" onAction="#breadClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fx:id="bread" fitHeight="123.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/images%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="cake" layoutX="739.0" layoutY="214.0" mnemonicParsing="false" onAction="#cakeClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fx:id="cake" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SooJi/음성인식/메뉴사진/chzhxlfkaltmwhrkrzpdlr20190503.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children></Pane>   
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
