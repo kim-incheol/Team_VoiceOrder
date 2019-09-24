@@ -8,19 +8,19 @@
 
 <HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Menu_and_Orderlist">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #15476b;">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #330000;">
          <children>
             <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="351.0" layoutY="65.0" prefHeight="135.0" prefWidth="263.0" text="CAFE" textAlignment="CENTER" textFill="#ffd12b">
                <font>
                   <Font name="Comic Sans MS" size="96.0" />
                </font>
             </Label>
-            <Button fx:id="order" layoutX="215.0" layoutY="226.0" mnemonicParsing="false" onAction="#menuClick" prefHeight="86.0" prefWidth="535.0" style="-fx-background-color: #14406e;" text="메 뉴 판" textFill="#e9edf8">
+            <Button fx:id="order" layoutX="215.0" layoutY="226.0" mnemonicParsing="false" onAction="#menuClick" prefHeight="86.0" prefWidth="535.0" style="-fx-background-color: #663300;" text="메 뉴 판" textFill="#e9edf8">
                <font>
                   <Font size="46.0" />
                </font>
             </Button>
-            <Button fx:id="orderlist" layoutX="215.0" layoutY="370.0" mnemonicParsing="false" onAction="#orderListClick" prefHeight="86.0" prefWidth="535.0" style="-fx-background-color: #14406e;" text="주 문 내 역 및 결 제" textFill="#e9edf8">
+            <Button fx:id="orderlist" layoutX="215.0" layoutY="370.0" mnemonicParsing="false" onAction="#orderListClick" prefHeight="86.0" prefWidth="535.0" style="-fx-background-color: #663300;" text="주 문 내 역 및 결 제" textFill="#e9edf8">
                <font>
                   <Font size="46.0" />
                </font>

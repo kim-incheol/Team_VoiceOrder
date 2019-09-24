@@ -10,23 +10,25 @@
 
 <HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Menu">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #15476b;">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #330000;">
          <children>
-            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="334.0" layoutY="8.0" prefHeight="83.0" prefWidth="298.0" text="MENU" textAlignment="CENTER" textFill="#ffce2b">
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="335.0" layoutY="39.0" prefHeight="83.0" prefWidth="298.0" text="MENU" textAlignment="CENTER" textFill="#ffce2b">
                <font>
                   <Font name="Comic Sans MS" size="72.0" />
                </font>
             </Label>
-            <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #14406e; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
+            <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
                <font>
                   <Font name="Calibri Light" size="21.0" />
                </font>
             </Button>
-            <Button fx:id="allmenu" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#allmenuClick" prefHeight="37.0" prefWidth="170.0" style="-fx-background-color: #195382;" text="전체 메뉴" textFill="#aed017" />
-            <Button fx:id="starmenu" layoutX="184.0" layoutY="110.0" mnemonicParsing="false" onAction="#starmenuClick" prefHeight="37.0" prefWidth="170.0" style="-fx-background-color: #12334d;" text="추천 메뉴" textFill="#8c972a" />
-            <Pane layoutX="14.0" layoutY="147.0" prefHeight="399.0" prefWidth="939.0" style="-fx-background-color: #195382;">
+            <Button fx:id="allmenu" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#allmenuClick" prefHeight="59.0" prefWidth="939.0" style="-fx-background-color: #663300;" text="주문을 원하시는 메뉴 카테고리를 선택해 주십시오." textFill="#fcfcfc">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Pane layoutX="13.0" layoutY="254.0" prefHeight="234.0" prefWidth="939.0" style="-fx-background-color: #663300;">
                <children>
-                  <Button fx:id="americano" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#americanoClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;">
+                  <Button fx:id="coffee" contentDisplay="TOP" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#coffeeClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;" text="에스프레소 음료">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -35,69 +37,30 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="latte" layoutX="257.0" layoutY="26.0" mnemonicParsing="false" onAction="#latteClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
+                  <Button fx:id="juice" contentDisplay="TOP" layoutX="257.0" layoutY="26.0" mnemonicParsing="false" onAction="#juiceClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;" text="주스, 기타 음료">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/다운로드.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="jamong" layoutX="502.0" layoutY="26.0" mnemonicParsing="false" onAction="#jamongClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/다운로드%20(1).jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="lemon" layoutX="739.0" layoutY="26.0" mnemonicParsing="false" onAction="#lemonClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/s502635127_1.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="smoothie" layoutX="21.0" layoutY="214.0" mnemonicParsing="false" onAction="#smoothieClick" prefHeight="160.0" prefWidth="164.0" style="-fx-background-color: white;">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../menuimg/망고.jpg" />
                            </image>
                         </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="choco" layoutX="257.0" layoutY="214.0" mnemonicParsing="false" onAction="#chocoClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/image_readtop_2018_307502_15263472033314926.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="bread" layoutX="502.0" layoutY="214.0" mnemonicParsing="false" onAction="#breadClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;">
-                     <graphic>
-                        <ImageView fitHeight="123.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/images%20(1).jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="cake" layoutX="739.0" layoutY="214.0" mnemonicParsing="false" onAction="#cakeClick" prefHeight="125.0" prefWidth="147.0" style="-fx-background-color: white;">
+                     </graphic></Button>
+                  <Button fx:id="desert" contentDisplay="TOP" layoutX="502.0" layoutY="26.0" mnemonicParsing="false" onAction="#desertClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;" text="디져트">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../menuimg/chzhxlfkaltmwhrkrzpdlr20190503.jpg" />
                            </image>
                         </ImageView>
-                     </graphic>
-                  </Button>
+                     </graphic></Button>
+                  <Button fx:id="starmenu" contentDisplay="TOP" layoutX="739.0" layoutY="26.0" mnemonicParsing="false" onAction="#starmenuClick" prefHeight="160.0" prefWidth="170.0" style="-fx-background-color: white;" text="추천 메뉴">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../menuimg/images%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children></Pane>   
          </children>
       </AnchorPane>

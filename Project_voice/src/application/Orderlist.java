@@ -45,24 +45,26 @@ public class Orderlist implements Initializable{
     
     @FXML 
     private void deleteorder(ActionEvent action) {
+    	
     	int select=orderlist_list.getSelectionModel().getSelectedIndex();
     	list.remove(select);
     	JOptionPane.showMessageDialog(null,"취소되었습니다.");
+    	
     }
     
     
-	@Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
-		
-		order_name.setText(NameSet.id);
-    	for(int i =0; i<Menu.mArray.size(); i++)
-    	{
-    		list.add(Menu.mArray.get(i));
-    	}
-
-    	
-    	orderlist_list.setItems(list);
+//	@Override
+//    public void initialize(URL location, ResourceBundle resources) {
+//        // TODO Auto-generated method stub
+//		
+//		order_name.setText(NameSet.id);
+//    	for(int i =0; i<Menu.mArray.size(); i++)
+//    	{
+//    		list.add(Menu.mArray.get(i));
+//    	}
+//
+//    	
+//    	orderlist_list.setItems(list);
     	
 //    	
 //    	
@@ -87,10 +89,10 @@ public class Orderlist implements Initializable{
 //			}
 //    		
 //		});
-    	
-
-    	
-    }
+//    	
+//
+//    	
+//    }
     
    
     //뒤로가기
@@ -135,6 +137,13 @@ public class Orderlist implements Initializable{
     	
           
        }
+
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
 

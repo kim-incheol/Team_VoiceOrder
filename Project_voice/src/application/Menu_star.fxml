@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.HBox?>
 
-
-<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.Menu_star">
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Menu_star">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #15476b;">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #330000;">
          <children>
-            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="334.0" layoutY="8.0" prefHeight="83.0" prefWidth="298.0" text="MENU" textAlignment="CENTER" textFill="#ffce2b">
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="226.0" layoutY="9.0" prefHeight="60.0" prefWidth="493.0" text="RECOMMENDED" textAlignment="CENTER" textFill="#ffce2b">
                <font>
-                  <Font name="Comic Sans MS" size="72.0" />
+                  <Font name="Comic Sans MS" size="42.0" />
                </font>
             </Label>
-            <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #14406e; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
+            <Button fx:id="back" layoutX="902.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
                <font>
                   <Font name="Calibri Light" size="21.0" />
                </font>
             </Button>
-            <Button fx:id="allmenu" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#allmenuClick" prefHeight="37.0" prefWidth="170.0" style="-fx-background-color: #12334d;" text="전체 메뉴" textFill="#728035" />
-            <Button fx:id="starmenu" layoutX="184.0" layoutY="110.0" mnemonicParsing="false" onAction="#starmenuClick" prefHeight="37.0" prefWidth="170.0" style="-fx-background-color: #195382;" text="추천 메뉴" textFill="#e4f829" />
-            <Pane layoutX="14.0" layoutY="147.0" prefHeight="399.0" prefWidth="939.0" style="-fx-background-color: #195382;" />
+            <Pane layoutX="655.0" layoutY="75.0" prefHeight="374.0" prefWidth="298.0" style="-fx-background-color: #9a5d2e;" />
+            <Button layoutX="823.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 " textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="655.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 취소" textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

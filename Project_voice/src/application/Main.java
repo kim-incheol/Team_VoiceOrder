@@ -11,7 +11,7 @@ import javafx.scene.Scene;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
-		Parent Voice = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		Parent Voice = FXMLLoader.load(getClass().getResource("_Main.fxml"));
 		Scene scene = new Scene(Voice);
 			
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

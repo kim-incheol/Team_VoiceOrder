@@ -35,13 +35,14 @@
             <Label layoutX="106.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #14406e;" text="주문시간" textAlignment="CENTER" textFill="#a5a817" />
             <Label fx:id="order_name" layoutX="193.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #14406e;" text="   이름" textAlignment="CENTER" textFill="#a5a817" />
             <Text layoutX="24.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="상품명" textAlignment="CENTER" wrappingWidth="263.0" />
-            <ListView fx:id="orderlist_list" layoutX="24.0" layoutY="151.0" prefHeight="385.0" prefWidth="263.0" style="-fx-background-color: #195382;" />
-            <Button fx:id="order_down" layoutX="588.0" layoutY="162.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="37.0" text="▼" />
-            <Button fx:id="order_up" layoutX="551.0" layoutY="162.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="37.0" text="▲" />
-            <Label fx:id="order_num" layoutX="508.0" layoutY="153.0" prefHeight="37.0" prefWidth="43.0" text="0" textFill="#ebebeb">
+            <Button fx:id="order_down" layoutX="726.0" layoutY="59.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="37.0" text="▼" />
+            <Button fx:id="order_up" layoutX="689.0" layoutY="59.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="37.0" text="▲" />
+            <Label fx:id="order_num" layoutX="646.0" layoutY="50.0" prefHeight="37.0" prefWidth="43.0" text="0" textFill="#ebebeb">
                <font>
                   <Font size="46.0" />
-               </font></Label>
+               </font>
+            </Label>
+            <ListView fx:id="orderlist_list" layoutX="31.0" layoutY="151.0" prefHeight="386.0" prefWidth="250.0" style="-fx-background-color: #195382;" />
          </children>
       </AnchorPane>
    </children>
