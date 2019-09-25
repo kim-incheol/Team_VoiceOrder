@@ -37,7 +37,7 @@ public class NameSet implements Initializable{
     public void okClick(ActionEvent event) {
         Stage newStage = new Stage();
         Stage stage = (Stage)ok.getScene().getWindow();
-        
+       
         if(txtname.getLength()==0 ) {
    		 JOptionPane.showMessageDialog(null, "이름을 입력하지 않았습니다. 이름을 입력해주세요 !");
    		 return;
@@ -46,12 +46,12 @@ public class NameSet implements Initializable{
         System.out.println(txtname.getText());
         id=txtname.getText().toString();
         System.out.println(id);
+        
+        if(txtname.getText().equals("susie")) {
         try {
         	 
         //     resultTxt.setText(inputTxt);
-            Parent Choice = FXMLLoader.load(getClass().getResource("Choice.fxml"));
-            
-            
+            Parent Choice = FXMLLoader.load(getClass().getResource("Manager.fxml"));
             
             Scene sc = new Scene(Choice);
             stage.setScene(sc);
@@ -64,9 +64,32 @@ public class NameSet implements Initializable{
             e.printStackTrace();
          
         }
+        }
+        else
+        {
+            try {
+           	 
+                //     resultTxt.setText(inputTxt);
+                    Parent Manager = FXMLLoader.load(getClass().getResource("Choice.fxml"));
+                    
+                    
+                    
+                    Scene sc = new Scene(Manager);
+                    stage.setScene(sc);
+                    
+                    stage.show();
+                   
+                    
+                } catch (IOException e) {
+                	
+                    e.printStackTrace();
+                 
+                }
+                }
+        }
+        	
         
 
     }
     
   
-}

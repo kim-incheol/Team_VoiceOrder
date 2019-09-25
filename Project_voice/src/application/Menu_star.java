@@ -33,7 +33,7 @@ public class Menu_star implements Initializable{
          Stage stage = (Stage)back.getScene().getWindow();
          Parent Main = null;
          try {
-      	   Main = FXMLLoader.load(getClass().getResource("Choice.fxml"));
+      	   Main = FXMLLoader.load(getClass().getResource("Menu.fxml"));
          } catch (IOException e) {
   		// TODO Auto-generated catch block
   		e.printStackTrace();

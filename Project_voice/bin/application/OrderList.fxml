@@ -9,32 +9,32 @@
 
 <HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Orderlist">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #15476b;">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #330000;">
          <children>
             <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="342.0" layoutY="14.0" prefHeight="49.0" prefWidth="263.0" text="order" textAlignment="CENTER" textFill="#ffd12b">
                <font>
                   <Font name="Comic Sans MS" size="34.0" />
                </font>
             </Label>
-            <Button fx:id="back" layoutX="900.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #14406e; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
+            <Button fx:id="back" layoutX="900.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
                <font>
                   <Font name="Calibri Light" size="21.0" />
                </font>
             </Button>
-            <Button fx:id="pay" layoutX="752.0" layoutY="477.0" mnemonicParsing="false" onAction="#payClick" prefHeight="72.0" prefWidth="199.0" style="-fx-background-color: #14406e;" text="결 제" textFill="#ffcc12">
+            <Button fx:id="pay" layoutX="752.0" layoutY="477.0" mnemonicParsing="false" onAction="#payClick" prefHeight="72.0" prefWidth="199.0" style="-fx-background-color: #9a5d2e;" text="결 제" textFill="#ffcc12">
                <font>
                   <Font name="Arial Black" size="21.0" />
                </font>
             </Button>
-            <Button fx:id="delete" layoutX="752.0" layoutY="389.0" mnemonicParsing="false" onAction="#deleteorder" prefHeight="72.0" prefWidth="199.0" style="-fx-background-color: #14406e;" text="주 문 취 소 " textFill="#ffcc12">
+            <Button fx:id="delete" layoutX="752.0" layoutY="389.0" mnemonicParsing="false" onAction="#deleteorder" prefHeight="72.0" prefWidth="199.0" style="-fx-background-color: #9a5d2e;" text="주 문 취 소 " textFill="#ffcc12">
                <font>
                   <Font name="Arial Black" size="21.0" />
                </font>
             </Button>
-            <Label layoutX="24.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #14406e;" text="주문번호" textFill="#a5a817" />
-            <Label layoutX="106.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #14406e;" text="주문시간" textAlignment="CENTER" textFill="#a5a817" />
-            <Label fx:id="order_name" layoutX="193.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #14406e;" text="   이름" textAlignment="CENTER" textFill="#a5a817" />
-            <Text layoutX="24.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="상품명" textAlignment="CENTER" wrappingWidth="263.0" />
+            <Label layoutX="24.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #9a5d2e;" text="주문번호" textFill="#a5a817" />
+            <Label layoutX="106.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #9a5d2e;" text="주문시간" textAlignment="CENTER" textFill="#a5a817" />
+            <Label fx:id="order_name" layoutX="193.0" layoutY="63.0" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #9a5d2e;" text="   이름" textAlignment="CENTER" textFill="#a5a817" />
+            <Text fill="WHITE" layoutX="24.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="상품명" textAlignment="CENTER" wrappingWidth="263.0" />
             <Button fx:id="order_down" layoutX="726.0" layoutY="59.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="37.0" text="▼" />
             <Button fx:id="order_up" layoutX="689.0" layoutY="59.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="37.0" text="▲" />
             <Label fx:id="order_num" layoutX="646.0" layoutY="50.0" prefHeight="37.0" prefWidth="43.0" text="0" textFill="#ebebeb">
@@ -42,7 +42,7 @@
                   <Font size="46.0" />
                </font>
             </Label>
-            <ListView fx:id="orderlist_list" layoutX="31.0" layoutY="151.0" prefHeight="386.0" prefWidth="250.0" style="-fx-background-color: #195382;" />
+            <ListView fx:id="orderlist_list" layoutX="31.0" layoutY="151.0" prefHeight="386.0" prefWidth="250.0" style="-fx-background-color: #663300;" />
          </children>
       </AnchorPane>
    </children>

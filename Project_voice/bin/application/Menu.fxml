@@ -17,7 +17,7 @@
                   <Font name="Comic Sans MS" size="72.0" />
                </font>
             </Label>
-            <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
+            <Button fx:id="back" layoutX="902.0" layoutY="15.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
                <font>
                   <Font name="Calibri Light" size="21.0" />
                </font>

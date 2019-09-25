@@ -57,8 +57,14 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="823.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 " textFill="#f6ffa8" />
-            <Button layoutX="655.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 취소" textFill="#f6ffa8" />
+            <Button layoutX="823.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 " textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
+            <Button layoutX="655.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 취소" textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
             <ListView fx:id="orderlist_list" layoutX="652.0" layoutY="73.0" prefHeight="367.0" prefWidth="298.0" style="-fx-background-color: #9a5d2e;" />
          </children>
       </AnchorPane>
