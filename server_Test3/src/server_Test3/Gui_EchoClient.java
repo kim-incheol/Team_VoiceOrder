@@ -48,7 +48,7 @@ class ClientFrame extends JFrame implements ActionListener {
 	public void client() throws IOException { 
 		Socket socket = null; 
 		try { 
-			socket = new Socket("192.168.0.15", 5555); 	// 서버 구축한 PC IP 입력, 소켓 열기ㄴ
+			socket = new Socket("192.168.0.40", 5555); 	// 서버 구축한 PC IP 입력, 소켓 열기ㄴ
 			writer = new PrintWriter(socket.getOutputStream(), true); 	// 쓰기
 			reader = new BufferedReader(new InputStreamReader( socket.getInputStream()));	// 읽기 
 			} catch (UnknownHostException e) { 
