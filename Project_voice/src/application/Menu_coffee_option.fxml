@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Menu_coffee">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #330000;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="334.0" layoutY="9.0" prefHeight="43.0" prefWidth="298.0" text="coffee" textAlignment="CENTER" textFill="#ffce2b">
+               <font>
+                  <Font name="Comic Sans MS" size="42.0" />
+               </font>
+            </Label>
+            <Button fx:id="back" layoutX="902.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
+               <font>
+                  <Font name="Calibri Light" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="797.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 " textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="629.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 취소" textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <ListView fx:id="orderlist_list" layoutX="629.0" layoutY="73.0" prefHeight="367.0" prefWidth="298.0" style="-fx-background-color: #9a5d2e;" />
+            <ImageView fitHeight="370.0" fitWidth="350.0" layoutX="130.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../menuimg/images.jpg" />
+               </image>
+            </ImageView>
+            <RadioButton layoutX="696.0" layoutY="119.0" mnemonicParsing="false" text="Hot" />
+            <RadioButton layoutX="820.0" layoutY="119.0" mnemonicParsing="false" text="Ice" />
+            <RadioButton layoutX="761.0" layoutY="172.0" mnemonicParsing="false" text="Grande" />
+            <RadioButton layoutX="696.0" layoutY="225.0" mnemonicParsing="false" text="휘핑크림" />
+            <RadioButton layoutX="696.0" layoutY="172.0" mnemonicParsing="false" text="Tall" />
+            <RadioButton layoutX="853.0" layoutY="172.0" mnemonicParsing="false" text="Venti" />
+            <RadioButton layoutX="820.0" layoutY="225.0" mnemonicParsing="false" text="샷" />
+            <Label layoutX="645.0" layoutY="120.0" text="종 류" />
+            <Label layoutX="645.0" layoutY="173.0" text="사이즈" />
+            <Label layoutX="645.0" layoutY="226.0" text="추 가" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

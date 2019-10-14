@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NameSet">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #330000;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="351.0" layoutY="65.0" prefHeight="135.0" prefWidth="263.0" text="CAFE" textAlignment="CENTER" textFill="#ffb42b">
+               <font>
+                  <Font name="Comic Sans MS" size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="314.0" prefHeight="60.0" prefWidth="252.0" text="이 름 설 정" textFill="#e8f3ff">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtname" layoutX="87.0" layoutY="394.0" onAction="#okClick" prefHeight="86.0" prefWidth="502.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;">
+               <font>
+                  <Font size="46.0" />
+               </font></TextField>
+            <Button fx:id="ok" layoutX="628.0" layoutY="394.0" mnemonicParsing="false" onAction="#okClick" prefHeight="86.0" prefWidth="68.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="확인" textFill="#e9edf8" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

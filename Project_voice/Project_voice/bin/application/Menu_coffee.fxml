@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Menu_coffee">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="965.0" style="-fx-background-color: #330000;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="334.0" layoutY="9.0" prefHeight="43.0" prefWidth="298.0" text="coffee" textAlignment="CENTER" textFill="#ffce2b">
+               <font>
+                  <Font name="Comic Sans MS" size="42.0" />
+               </font>
+            </Label>
+            <Button fx:id="back" layoutX="902.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClick" prefHeight="49.0" prefWidth="51.0" style="-fx-background-color: #663300; -fx-border-color: #e9edf8;" text="←" textFill="#e9edf8">
+               <font>
+                  <Font name="Calibri Light" size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="823.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 " textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
+            <Button layoutX="655.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 취소" textFill="#f6ffa8">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
+            <HBox layoutX="652.0" layoutY="75.0" prefHeight="367.0" prefWidth="298.0">
+               <children>
+                  <TableView fx:id="myTableView" editable="true" prefHeight="367.0" prefWidth="222.0">
+                    <columns>
+                      <TableColumn fx:id="product_name" prefWidth="75.0" text="상품명" />
+                        <TableColumn fx:id="product_price" prefWidth="75.0" text="가격" />
+                      <TableColumn fx:id="product_num" prefWidth="75.0" text="수량" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <AnchorPane prefHeight="367.0" prefWidth="120.0">
+                     <children>
+                        <Button layoutX="-1.0" layoutY="32.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="51.0" text="▲" />
+                        <Button layoutX="50.0" layoutY="32.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="51.0" text="▼" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <ScrollPane fx:id="scrollPane" layoutX="44.0" layoutY="73.0" prefHeight="487.0" prefWidth="581.0" style="-fx-background-color: #330002;">
+              <content>
+                <AnchorPane fx:id="anchoPane" minHeight="0.0" minWidth="0.0" opacity="0.81" prefHeight="489.0" prefWidth="578.0" style="-fx-background-color: #330002;">
+                     <children>
+                        <Button fx:id="americano" contentDisplay="TOP" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#americanoClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="아메리카노                   ₩ 4,500" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+                           <graphic>
+                              <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../menuimg/images.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="latte" contentDisplay="TOP" layoutX="295.0" layoutY="14.0" mnemonicParsing="false" onAction="#latteClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="카페라떼                        ₩ 5000" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="156.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../menuimg/다운로드.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="cappuccino" contentDisplay="TOP" layoutX="14.0" layoutY="250.0" mnemonicParsing="false" onAction="#cappuccinoClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="카푸치노                         ₩5000" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../menuimg/35130477-컵-카푸치노-격리.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="caramel" contentDisplay="TOP" layoutX="295.0" layoutY="250.0" mnemonicParsing="false" onAction="#caramelClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="카라멜마끼아또               ₩5000" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../menuimg/images%20(2).jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <effect>
+                        <Glow level="0.13" />
+                     </effect>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
