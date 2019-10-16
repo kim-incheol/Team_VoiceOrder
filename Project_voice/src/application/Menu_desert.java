@@ -37,7 +37,6 @@ public class Menu_desert implements Initializable {
          Scene sc = new Scene(Main);
          stage.setScene(sc);
          stage.show();
-           
         }
     
     public void breadClick() {

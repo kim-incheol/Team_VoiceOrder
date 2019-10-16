@@ -84,13 +84,7 @@ public class Menu_and_Orderlist implements Initializable{
     
     //음성인식
     public void VoiceRecoClick() {
-    	try {
     		RecoVoice();
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
     }
     
     public void RecoVoice(String... args) {

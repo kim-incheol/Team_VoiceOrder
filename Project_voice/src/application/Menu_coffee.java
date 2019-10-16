@@ -28,24 +28,25 @@ public class Menu_coffee implements Initializable {
     @FXML private Button latte;
     @FXML private Button caramel;
     @FXML private Button cappuccino;
-    static ObservableList<TableRowDataModel> myList;
+    private ObservableList<TableRowDataModel> myList;
     
     @FXML
-    static TableView<TableRowDataModel> myTableView;
+    private TableView<TableRowDataModel> myTableView;
     @FXML
-    static TableColumn<TableRowDataModel, String> product_name;
+    private TableColumn<TableRowDataModel, String> product_name;
     @FXML
-    static TableColumn<TableRowDataModel, String> product_price;
+    private TableColumn<TableRowDataModel, String> product_price;
     @FXML
-    static TableColumn<TableRowDataModel, String> product_num;
+    private TableColumn<TableRowDataModel, String> product_num;
    
     Stage window;
     Scene scene1, scene2;
     private Pane pane1;
     private Pane pane2;
+    static 
     
     // 테이블뷰에 넣을 데이터 ( 상품명, 가격, 수량 )
-    static void setOrderlist_Table(String name, String price, String num) {
+    public void setOrderlist_Table(String name, String price, String num) {
     	myList = FXCollections.observableArrayList(
     			new TableRowDataModel(new SimpleStringProperty(name), new SimpleStringProperty(price), new SimpleStringProperty(num))
     			);
@@ -116,13 +117,7 @@ public class Menu_coffee implements Initializable {
     
   //음성인식
     public void VoiceRecoClick() {
-    	try {
     		RecoVoice();
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
     }
     
     public void RecoVoice(String... args) {
