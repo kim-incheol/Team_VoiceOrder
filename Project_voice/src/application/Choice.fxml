@@ -30,6 +30,11 @@
                   <Font name="Comic Sans MS" size="23.0" />
                </font>
             </Label>
+            <Button fx:id="VoiceReco" layoutX="823.0" layoutY="444.0" mnemonicParsing="false" onAction="#VoiceRecoClick" prefHeight="63.0" prefWidth="69.0" text="음성인식">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

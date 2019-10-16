@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 public class Menu_desert implements Initializable {
 
     @FXML private Button back; //뒤로가기
-
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {

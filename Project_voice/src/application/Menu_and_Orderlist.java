@@ -14,13 +14,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
- 
+import com.example.speech.*;
+
 public class Menu_and_Orderlist implements Initializable{
     @FXML private Button order; //주문하기 버튼
     @FXML private Button orderlist; //주문내역&결제 버튼
     @FXML private Button back1; //뒤로가기 버튼
     @FXML private Label namelabel;
-   
+    @FXML private Button VoiceReco;
+    
  
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -79,4 +81,25 @@ public class Menu_and_Orderlist implements Initializable{
         
 
     }
+    
+    //음성인식
+    public void VoiceRecoClick() {
+    	try {
+    		RecoVoice();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    public void RecoVoice(String... args) {
+    	try {
+			Recognize.sttstart(args);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
 }

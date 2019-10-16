@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.example.speech.Recognize;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -26,24 +28,24 @@ public class Menu_coffee implements Initializable {
     @FXML private Button latte;
     @FXML private Button caramel;
     @FXML private Button cappuccino;
-    ObservableList<TableRowDataModel> myList;
+    static ObservableList<TableRowDataModel> myList;
     
     @FXML
-    private TableView<TableRowDataModel> myTableView;
+    static TableView<TableRowDataModel> myTableView;
     @FXML
-    private TableColumn<TableRowDataModel, String> product_name;
+    static TableColumn<TableRowDataModel, String> product_name;
     @FXML
-    private TableColumn<TableRowDataModel, String> product_price;
+    static TableColumn<TableRowDataModel, String> product_price;
     @FXML
-    private TableColumn<TableRowDataModel, String> product_num;
- 
+    static TableColumn<TableRowDataModel, String> product_num;
+   
     Stage window;
     Scene scene1, scene2;
     private Pane pane1;
     private Pane pane2;
     
     // 테이블뷰에 넣을 데이터 ( 상품명, 가격, 수량 )
-    public void setOrderlist_Table(String name, String price, String num) {
+    static void setOrderlist_Table(String name, String price, String num) {
     	myList = FXCollections.observableArrayList(
     			new TableRowDataModel(new SimpleStringProperty(name), new SimpleStringProperty(price), new SimpleStringProperty(num))
     			);
@@ -54,7 +56,7 @@ public class Menu_coffee implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // TODO Auto-generated method stub
-    	setOrderlist_Table("아메리카노","4500","1");
+    	setOrderlist_Table("","","");
     	product_name.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
     	product_price.setCellValueFactory(cellData -> cellData.getValue().priceProperty());
     	product_num.setCellValueFactory(cellData -> cellData.getValue().numProperty());
@@ -109,6 +111,28 @@ public class Menu_coffee implements Initializable {
     	System.out.println("카푸치노 클릭");
     }
   
+    
+    
+    
+  //음성인식
+    public void VoiceRecoClick() {
+    	try {
+    		RecoVoice();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    public void RecoVoice(String... args) {
+    	try {
+			Recognize.sttstart(args);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
   
 
     }

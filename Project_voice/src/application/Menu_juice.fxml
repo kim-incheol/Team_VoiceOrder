@@ -23,43 +23,23 @@
                         <Font name="Calibri Light" size="21.0" />
                      </font>
                   </Button>
-                  <Pane layoutX="655.0" layoutY="75.0" prefHeight="374.0" prefWidth="298.0" style="-fx-background-color: #9a5d2e;" />
-                  <Button fx:id="jamong" contentDisplay="TOP" layoutX="48.0" layoutY="75.0" mnemonicParsing="false" onAction="#jamongClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="자몽에이드                   ₩ 5500" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
-                     <graphic>
-                        <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/다운로드%20(1).jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="lemon" contentDisplay="TOP" layoutX="355.0" layoutY="76.0" mnemonicParsing="false" onAction="#lemonClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="레몬에이드              ₩ 5500" textAlignment="CENTER">
-                     <graphic>
-                        <ImageView fitHeight="156.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/s502635127_1.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="blueberry" contentDisplay="TOP" layoutX="48.0" layoutY="327.0" mnemonicParsing="false" onAction="#blueberryClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="블루베리스무디      ₩6000" textAlignment="CENTER">
-                     <graphic>
-                        <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/r0006.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="mango" contentDisplay="TOP" layoutX="355.0" layoutY="327.0" mnemonicParsing="false" onAction="#mangoClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="망고스무디               ₩6000" textAlignment="CENTER">
-                     <graphic>
-                        <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../menuimg/망고.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <Pane layoutX="655.0" layoutY="75.0" prefHeight="374.0" prefWidth="298.0" style="-fx-background-color: #9a5d2e;">
+                     <children>
+                        <HBox layoutX="5.0" layoutY="5.0" prefHeight="367.0" prefWidth="288.0">
+                           <children>
+                              <TableView editable="true" prefHeight="367.0" prefWidth="289.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="상품명" />
+                                  <TableColumn prefWidth="75.0" text="가격" />
+                                    <TableColumn prefWidth="75.0" text="수량" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </children></Pane>
                   <Button layoutX="823.0" layoutY="458.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="128.0" style="-fx-background-color: #9a5d2e;" text="주문 " textFill="#f6ffa8">
                      <font>
                         <Font size="21.0" />
@@ -68,6 +48,50 @@
                      <font>
                         <Font size="21.0" />
                      </font></Button>
+                  <ScrollPane layoutX="44.0" layoutY="73.0" prefHeight="487.0" prefWidth="581.0" style="-fx-background-color: #330002;">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" opacity="0.81" prefHeight="489.0" prefWidth="578.0" style="-fx-background-color: #330002;">
+                           <children>
+                              <Button fx:id="jamong" contentDisplay="TOP" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#jamongClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="자몽에이드                   ₩ 5500" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+                                 <graphic>
+                                    <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../menuimg/다운로드%20(1).jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="lemon" contentDisplay="TOP" layoutX="291.0" layoutY="14.0" mnemonicParsing="false" onAction="#lemonClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="레몬에이드              ₩ 5500" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="156.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../menuimg/s502635127_1.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="blueberry" contentDisplay="TOP" layoutX="14.0" layoutY="264.0" mnemonicParsing="false" onAction="#blueberryClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="블루베리스무디      ₩6000" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../menuimg/r0006.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="mango" contentDisplay="TOP" layoutX="291.0" layoutY="251.0" mnemonicParsing="false" onAction="#mangoClick" prefHeight="225.0" prefWidth="255.0" style="-fx-background-color: white;" text="망고스무디               ₩6000" textAlignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="158.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../menuimg/망고.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
                </children>
             </AnchorPane>
          </children>
