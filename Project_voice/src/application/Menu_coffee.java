@@ -1,9 +1,14 @@
 package application;
 
+import java.awt.Window;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.*;
 
+
+import javafx.application.Platform;
 import com.example.speech.Recognize;
 
 import javafx.beans.property.SimpleStringProperty;
@@ -15,11 +20,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 public class Menu_coffee implements Initializable {
@@ -38,12 +42,13 @@ public class Menu_coffee implements Initializable {
     private TableColumn<TableRowDataModel, String> product_price;
     @FXML
     private TableColumn<TableRowDataModel, String> product_num;
-   
-    Stage window;
-    Scene scene1, scene2;
-    private Pane pane1;
-    private Pane pane2;
+
+    private Stack<Label> stack = new Stack<>();
+    private Popup numPopup;
+    private List<Popup> numPopList = new ArrayList<>();
+
     static int selectindex=0;
+
     
     // 테이블뷰에 넣을 데이터 ( 상품명, 가격, 수량 )
     public void setOrderlist_Table(String name, String price, String num) {
@@ -93,20 +98,13 @@ public class Menu_coffee implements Initializable {
         }
     
     public void americanoClick() {
-    	Stage newStage2 = new Stage(); 
-        Stage stage2 = (Stage)back.getScene().getWindow();
-        Parent Menu_coffee = null;
-        try {
-        	Menu_coffee = FXMLLoader.load(getClass().getResource("numberboard.fxml"));
-        } catch (IOException e) {
- 		// TODO Auto-generated catch block
- 		e.printStackTrace();
- 		}
-        Scene sc2 = new Scene(Menu_coffee);
-        stage2.setScene(sc2);
-        stage2.show();
-    	
-    	
+    	try {
+    		Stage stage = (Stage)americano.getScene().getWindow();
+    		openNumPopup(stage);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}	
     	System.out.println("아메리카노 클릭");
     }
 
@@ -123,10 +121,51 @@ public class Menu_coffee implements Initializable {
     public void cappuccinoClick() {
     	System.out.println("카푸치노 클릭");
     }
-  
+
     
+    public void closeNumPopup() {
+    	if(stack != null && stack.size() > 0) {
+    		stack.pop();
+    		
+    		Popup numclosePopup = numPopList.get(stack.size());
+    		numPopList.remove(stack.size());
+    		numclosePopup.hide();
+    	}
+    }
     
-    
+    public void openNumPopup(Stage stage) {
+    	numPopup = new Popup();
+    	
+    	if(numPopup.isShowing()) {
+    		numPopup.hide();
+    	}else {
+    		Scene scene = stage.getScene();
+    		javafx.stage.Window window = scene.getWindow();
+    		
+    		//numPopup.getContent().clear();
+    		numPopList.add(numPopup);
+    		
+    		Parent numberboard = null;
+    		try {
+    			numberboard = FXMLLoader.load(getClass().getResource("NumberBoard.fxml"));
+    		} catch (IOException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+    		
+			numPopup.getContent().addAll(numberboard);
+    		
+    		Platform.runLater(new Runnable() {
+				
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					numPopup.show(window);
+				}
+			});	
+    	}
+    }
+
   //음성인식
     public void VoiceRecoClick() {
     		RecoVoice();
@@ -142,4 +181,5 @@ public class Menu_coffee implements Initializable {
     }
   
 
-    }
+}
+
