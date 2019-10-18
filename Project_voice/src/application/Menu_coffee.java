@@ -43,13 +43,22 @@ public class Menu_coffee implements Initializable {
     Scene scene1, scene2;
     private Pane pane1;
     private Pane pane2;
-    static 
+    static int selectindex=0;
     
     // 테이블뷰에 넣을 데이터 ( 상품명, 가격, 수량 )
     public void setOrderlist_Table(String name, String price, String num) {
-    	myList = FXCollections.observableArrayList(
+		myList = FXCollections.observableArrayList(
     			new TableRowDataModel(new SimpleStringProperty(name), new SimpleStringProperty(price), new SimpleStringProperty(num))
     			);
+    	selectindex++;
+    }
+    
+    
+    public void deleteRow(int selecteindex) {
+    	if(selectindex>0) {
+    		myList.remove(selecteindex);
+        	selectindex--;
+    	}
     }
     
     
@@ -57,7 +66,10 @@ public class Menu_coffee implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // TODO Auto-generated method stub
+    	if(myList==null) {System.out.println("myList"+"NULL");}
+    	System.out.println("넣기전"+selectindex);
     	setOrderlist_Table("","","");
+    	System.out.println("넣은후"+selectindex);
     	product_name.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
     	product_price.setCellValueFactory(cellData -> cellData.getValue().priceProperty());
     	product_num.setCellValueFactory(cellData -> cellData.getValue().numProperty());
