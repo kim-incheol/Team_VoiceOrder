@@ -123,48 +123,48 @@ public class Menu_coffee implements Initializable {
     }
 
     
-    public void closeNumPopup() {
-    	if(stack != null && stack.size() > 0) {
-    		stack.pop();
-    		
-    		Popup numclosePopup = numPopList.get(stack.size());
-    		numPopList.remove(stack.size());
-    		numclosePopup.hide();
-    	}
+    public void closeNumPopup(Button btn) {
+
+        numPopup = (Popup)btn.getScene().getWindow(); // 버튼을 통해서 현재 스테이지를 알아냄
+         numPopup.hide();
+
+       System.out.println("수량 팝업창 닫기");
     }
     
     public void openNumPopup(Stage stage) {
-    	numPopup = new Popup();
-    	
-    	if(numPopup.isShowing()) {
-    		numPopup.hide();
-    	}else {
-    		Scene scene = stage.getScene();
-    		javafx.stage.Window window = scene.getWindow();
-    		
-    		//numPopup.getContent().clear();
-    		numPopList.add(numPopup);
-    		
-    		Parent numberboard = null;
-    		try {
-    			numberboard = FXMLLoader.load(getClass().getResource("NumberBoard.fxml"));
-    		} catch (IOException e) {
-    			// TODO Auto-generated catch block
-    			e.printStackTrace();
-    		}
-    		
-			numPopup.getContent().addAll(numberboard);
-    		
-    		Platform.runLater(new Runnable() {
-				
-				@Override
-				public void run() {
-					// TODO Auto-generated method stub
-					numPopup.show(window);
-				}
-			});	
-    	}
-    }
+        numPopup = new Popup();
+        
+        if(numPopup.isShowing()) {
+           numPopup.hide();
+        }else {
+           Scene scene = stage.getScene();
+           javafx.stage.Window window = scene.getWindow();
+           
+           numPopup.getContent().clear();
+//           numPopList.add(numPopup);
+           
+           Parent numberboard = null;
+           try {
+              numberboard = FXMLLoader.load(getClass().getResource("numberboard.fxml"));
+           } catch (IOException e) {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+           }
+//           stack.push(numPopup);
+           
+          numPopup.getContent().addAll(numberboard);
+          numPopup.setAutoHide(true);
+           
+           Platform.runLater(new Runnable() {
+             
+             @Override
+             public void run() {
+                // TODO Auto-generated method stub
+                numPopup.show(window);
+             }
+          });   
+        }
+     }
 
   //음성인식
     public void VoiceRecoClick() {

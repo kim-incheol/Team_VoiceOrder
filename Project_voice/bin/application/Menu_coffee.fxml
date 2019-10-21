@@ -94,10 +94,17 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Button layoutX="801.0" layoutY="14.0" mnemonicParsing="false" onAction="#VoiceRecoClick" prefHeight="49.0" prefWidth="78.0" text="음성 인식">
+            <Button layoutX="831.0" layoutY="12.0" mnemonicParsing="false" onAction="#VoiceRecoClick" prefHeight="49.0" prefWidth="67.0" style="-fx-background-color: #330000;">
                <font>
                   <Font size="13.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Users/lee/Desktop/iconfinder_icon-ios7-mic-outline_211771.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
       </AnchorPane>

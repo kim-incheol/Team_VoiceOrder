@@ -44,43 +44,21 @@ public class Menu_star implements Initializable{
            
         }
     
-    //전체메뉴
-    public void allmenuClick() {
 
-     	 Stage newStage1 = new Stage(); 
-          Stage stage1 = (Stage)allmenu.getScene().getWindow();
-          Parent allMenu = null;
-          try {
-          	allMenu = FXMLLoader.load(getClass().getResource("Menu.fxml"));
-          } catch (IOException e) {
-   		// TODO Auto-generated catch block
-   		e.printStackTrace();
-   		}
-          Scene sc1 = new Scene(allMenu); 
-          stage1.setScene(sc1);
-          stage1.show();
-          System.out.println("전체메뉴클릭");
-            
-         }
+    public void americanoClick() {
+    	System.out.println("아메리카노 클릭");
+    }
+    public void cakeClick() {
+    	System.out.println("케이크 클릭");
+    }
+    public void lemonClick() {
+    	System.out.println("레몬에이드 클릭");
+    }
+    public void breadClick() {
+    	System.out.println("허니브레드 클릭");
+    }
    
     
-    //추천메뉴
-    public void starmenuClick() {
-
-   	 Stage newStage2 = new Stage(); 
-        Stage stage2 = (Stage)starmenu.getScene().getWindow();
-        Parent Menu_star = null;
-        try {
-       	 Menu_star = FXMLLoader.load(getClass().getResource("Menu_star.fxml"));
-        } catch (IOException e) {
- 		// TODO Auto-generated catch block
- 		e.printStackTrace();
- 		}
-        Scene sc2 = new Scene(Menu_star); 
-        stage2.setScene(sc2);
-        stage2.show();
-        System.out.println("추천메뉴클릭");
-       }
     
    
         
